@@ -1,15 +1,341 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="/style.css">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<title></title>
+	
 </head>
 <body>
-	<h1>
-	This is a test
-	</h1>
-	<div class="rainbow">
-		bla
-	</div>
+ 
+     <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/jssor.slider-22.2.6.mini.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideDuration: 800,
+              $SlideEasing: $Jease$.$OutQuint,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*responsive code begin*/
+            /*you can remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1920);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*responsive code end*/
+        });
+    </script>
+ <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                   
+                  Menu
+                    
+                </li>
+                <li>
+                    <a href="#About">Sobre Mí</a>
+                </li>
+                <li>
+                    <a href="#habilidades">Habilidades</a>
+                </li>
+                <li>
+                    <a href="#exp">Experiencia</a>
+                </li>
+                <li>
+                    <a href="#libros">Libros</a>
+                </li>
+               
+                <li>
+                    <a href="#">Contacto</a>
+                </li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>
+      	Diego Esteban Ortiz
+      </h1>
+    </div>
+   
+  </div>
+  </div>
+   <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
+            <a data-u="any" href="http://www.jssor.com" style="display:none">Full Width Slider</a>
+            <div>
+                <img data-u="image" src="image/map2.jpg" />
+                <div style="position:absolute;top:30px;left:30px;width:480px;height:120px;z-index:0;font-size:50px;color:#ffffff;line-height:60px; font-style: italic; font-family: 'Merriweather'">Historia</div>
+                <div style="position:absolute;top:300px;left:30px;width:480px;height:120px;z-index:0;font-size:30px;color:#ffffff;line-height:38px; font-style: italic; font-family: 'Merriweather'">Castillo, pueblo y Río de Chagres, Colombia 1800</div>
+            </div>
+            <div>
+                <img data-u="image" src="image/Turing.jpg" />
+                <div style="position:absolute;top:30px;left:30px;width:480px;height:120px;z-index:0;font-size:50px;color:#000000;line-height:60px; font-style: italic; font-family: 'Merriweather'">Alan Turing</div>
+            </div>
+            <div>
+                <img data-u="image" src="image/dino.jpg" />
+            </div>
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+            <!-- bullet navigator item prototype -->
+            <div data-u="prototype" style="width:16px;height:16px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
+    </div>
+    <section id ="About" class="section-padding">
+      <div class="container">
+        <div class="row" style=" margin-top: 20px; ">
+          <div class="header-section text-center">
+            <h2>Sobre Mí</h2>
+            <p>Hola! Es un placer que te te tomes el tiempo para visitar mi pagina, <br> a continuación encontraras información sobre mí, tanto academica como personal, espero que sea de utilidad.</p>
+            <hr class="bottom-line">
+          </div>
+          <div class="feature-info">
+            <div class="fea">
+              <div class="col-md-6">
+                <div class="heading pull-right">
+                 
+                 	<img src="image/pic1.jpg" style="
+ 				width: 250px;
+    			height: 250px;
+                 	 border-radius: 250px;
+                -webkit-border-radius: 250px;
+               -moz-border-radius: 250px;">
+                 
+                  
+                </div>
+                <div class="fea-img pull-left">
+                  <i class="fa fa-css3"></i>
+                </div>
+              </div>
+            </div>
+            <div class="fea">
+              <div class="col-md-6">
+                <div class="heading pull-right">
+                  <h4>Mi educación</h4>
+                  <p>Soy graduado bachiller del Colegio Abraham Lincoln de Bogota, nivel B2 en Frances, Ingles avanzado. Actualmente me encuentro haciendo pregrado en ingenieria de sistemas y computación junto con historia en la Universidad de Los Andes.</p>
+                </div>
+                <div class="fea-img pull-left">
+                  <i class="fa fa-drupal"></i>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+        </div>
+      </div>
+    </section>
+    <section id ="habilidades" class="section-padding" style=" margin-top: 10px; ">
+      <div class="container">
+        <div class="row" >
+          <div class="col-md-6">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">         
+              <div class="orga-stru">
+                <h3>Java</h3>
+                <p>Experimentado</p>
+                <i class="fa fa-male"></i>
+              </div>  
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">         
+              <div class="orga-stru">
+                <h3>C++</h3>
+                <p>Buen Nivel</p>
+                <i class="fa fa-male"></i>
+              </div>  
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">         
+              <div class="orga-stru">
+                <h3>Python</h3>
+                <p>Buen Nivel</p>
+                <i class="fa fa-male"></i>
+              </div>  
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detail-info">
+              <hgroup>
+                <h3 class="det-txt"> Mis habilidades</h3>
+                
+              </hgroup>
+              <p class="det-p">Durante los ultimos años eh estado explorando diferentes lenguajes con la intención de expandir mis conocimientos y ser capaz de desarrollar con miras a diferentes tecnologías, en un futuro planeo tanto profundizar en los conocimientos adquiridos como explorar las nuevas posibilidades. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+     <section id="exp">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+              <h2 class="text-center">Experiencia</h2>
+              <p class="cta-2-txt">Actualmente me encuentro trabajando en una empresa nueva como programador de contenidos en c++ enfocado en ambientes interactivos en 3D usando el motor Unreal Engine 4</p>
+             <center><img src="image/UE4L.png" style="
+ 				width: 250px;
+    			height: 250px;
+                 	 border-radius: 350px;
+                -webkit-border-radius: 350px;
+               -moz-border-radius: 350px;
+               align-content: center;
+               ">
+               </center>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id ="libros" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="header-section text-center">
+            <h2>Libros Recomendados</h2>
+            <p>Soy un lector entusiasta en especial sobre los diferentes acontecimientos que sucedieron el siglo pasado,a continuación veran 3 libros <br> que recomiendo a cualquier interesado por la historia de la primera mitad del siglo con un enfoque en el final de la Segunda Guerra Mundial.</p>
+            <hr class="bottom-line">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 padleft-right">
+            
+              <center><a href="https://www.amazon.com/Savage-Continent-Europe-Aftermath-World/dp/125003356X"><img src="image/sc.jpg" class="img-responsive" style="
+ 				width: 260px;
+    			height: 400px;
+                 	 
+               "></a>
+               </center>
+              <figcaption>
+                  <h3>Savage Continent</h3>
+                  <p>El libro se centra en la realidad inmediata de Europa una vez Alemania Nazi se rinde. Recopilando testimonios de soldados y refugiados acompañados de fotografias explicitas el libro permite acercarse al sufrimiento de la gente del común y hacer paralelismos con la actualidad. </p>
+              </figcaption>
+              <a href="#"></a>
+           
+          </div>
+          <div class="col-md-4 col-sm-6 padleft-right">
+            
+              <center><a href="https://www.amazon.com/Age-Extremes-1914-1991-Eric-Hobsbawm/dp/0349106711/ref=dp_ob_title_bk"><img src="image/hobs.jpg" class="img-responsive" style="
+ 				width: 260px;
+    			height: 400px;
+                 	 
+               "></a>
+               </center>
+              <figcaption>
+                  <h3>The Age Of Extremes</h3>
+                  <p>También conocido como Historia del Siglo XX, esta obra de Hobsbawm hace un recorrido por el siglo XX analizando los fracasos del socialismo, el capitalismo y el nacionalismo haciendo una reflexión del psupuesto progreso de la sociedad occidental y la epoca de incertidumbre que se viene en el siglo XXI. </p>
+              </figcaption>
+              <a href="#"></a>
+            
+          </div>
+          <div class="col-md-4 col-sm-6 padleft-right">
+           
+              <center><a href="https://www.amazon.com/After-Reich-Brutal-History-Occupation/dp/0465003389/ref=sr_1_1?s=books&ie=UTF8&qid=1487142142&sr=1-1&keywords=after+the+reich"><img src="image/af.jpg" class="img-responsive" style="
+ 				width: 260px;
+    			height: 400px;
+                 	 
+               "></a>
+               </center>
+              <figcaption>
+                  <h3>After The Reich</h3>
+                  <p>Una obra mas historica, el libro se centra en las migraciones forzadas al final de la guerra, los abusos aliados registrados en los campos de refugiados en Alemania y los problemas de los diferentes programas de alivio para los desplazados.</p>
+              </figcaption>
+              <a href="#"></a>
+            
+          </div>
+        
+        </div>
+      </div>
+    </section>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+   
+    <script type="text/javascript">
+    /*	(function ($) {
+                
+    // Navigation scrolls
+    $('.sidebar-nav li a').bind('click', function(event) {
+        $('.sidebar-nav li').removeClass('active');
+        $(this).closest('li').addClass('active');
+        var $anchor = $(this);
+        var nav = $($anchor.attr('href'));
+        if (nav.length) {
+        $('html, body').stop().animate({				
+            scrollTop: $($anchor.attr('href')).offset().top				
+        }, 1500, 'easeInOutExpo');
+        
+        event.preventDefault();
+        }
+    });
+    
+    // Add smooth scrolling to all links in navbar
+    $(".sidebar-nav, a.mouse-hover, .overlay-detail a").on('click', function(event) {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 900, function(){
+            window.location.hash = hash;
+        });
+    });
+})(jQuery);*/
+    </script>
+
+	
+   
+    
+   
+    <!-- #endregion Jssor Slider End -->
+  
 </body>
 </html>
